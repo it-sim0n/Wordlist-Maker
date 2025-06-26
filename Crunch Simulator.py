@@ -19,7 +19,7 @@ def print_banner():
 
     print(simon)
 
-
+print_banner()
 def validate_pattern(pattern, charset_lower, charset_upper, charset_numbers, charset_symbols):
     """Validate the pattern and assign character sets to each position"""
     charsets = {
@@ -151,7 +151,7 @@ if save_to_file:
         file_start = words[0] if words else ""
         
         for word in words:
-            word_size = len(word.encode('utf-8')) + 1  # +1 for newline
+            word_size = len(word.encode('utf-8')) + 1 
             if current_size + word_size > split_bytes and file_words:
                 file_name = f"{file_start}-{file_words[-1]}.txt"
                 with open(file_name, 'w', encoding='utf-8') as f:
