@@ -10,12 +10,15 @@ def print_banner():
     WHITE = '\033[97m'
     GREEN = "\033[92m"
     simon=(GREEN + r"""
+ 
    MADE WITH..._____  _____ __  __  ____  _   _ 
               / ____| _   _|  \/  |/ __ \| \ | |
               | (___   | | | \  / | |  | |  \| |
                \___ \  | | | |\/| | |  | | . ` |
                ____) |_| |_| |  | | |__| | |\  |
-              |_____/|_____|_|  |_|\____/|_| \_|""")
+              |_____/|_____|_|  |_|\____/|_| \_|
+           
+           """)
 
     print(simon)
 
@@ -70,7 +73,6 @@ def generate_permutations(words):
     """Generate all permutations of specific words (-p)"""
     return [''.join(perm) for perm in itertools.permutations(words)]
 
-print("*** Crunch Simulator ***")
 use_permutation = input("Do you want to generate permutations of specific words (-p)? (yes/no): ").lower() == "yes"
 
 words = []
